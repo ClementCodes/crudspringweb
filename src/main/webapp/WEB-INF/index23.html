@@ -1,0 +1,59 @@
+<!-- @format -->
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%> <%@ taglib prefix="c"
+uri="http://java.sun.com/jsp/jstl/core"%> <%@ taglib prefix="spring"
+uri="http://www.springframework.org/tags"%> <%@ taglib prefix="form"
+uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px, solid black;
+    }
+
+    th,
+    td {
+      padding: 10px;
+    }
+  </style>
+
+  Vosu etes sur la pages d'enregistrement ...
+
+  <body>
+    <h1>Page d'enregistrement</h1>
+
+    <p>
+      <form:errors path="visitorObject.*" />
+    </p>
+
+    <form:form action="/register" methode="POST" modelAttribute="visitorObject">
+      <p>
+        <from:label path="firstName">Firstname </from:label>
+        <from:input path="firstName">Firstname </from:input>
+      </p>
+
+      <p>
+        <from:label path="lastName">lastName </from:label>
+        <from:input path="lastName">lastName </from:input>
+      </p>
+
+      <p>
+        <from:label path="invitationNumber">invitationNumber </from:label>
+        <from:input path="invitationNumber">invitationNumber </from:input>
+      </p>
+
+      <input type="text" name="nom" id="nom" />
+
+      <input type="submit" />
+    </form:form>
+  </body>
+</html>
